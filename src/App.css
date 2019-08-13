@@ -3,9 +3,10 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 10s ease-in-out;
   height: 40vmin;
   pointer-events: none;
+  border-radius: 50%;
 }
 
 .App-header {
@@ -24,10 +25,30 @@
 }
 
 @keyframes App-logo-spin {
-  from {
+  0% {
+    transform: rotate(0deg);
+    float: initial;
+  }
+  50% {
+    transform: rotate(360deg);
+    float: left;
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  40% {
     transform: rotate(0deg);
   }
-  to {
+  60% {
+    transform: rotate(270deg);
+  }
+  78% {
+    transform: rotate(78deg);
+  }
+  32% {
     transform: rotate(360deg);
   }
 }

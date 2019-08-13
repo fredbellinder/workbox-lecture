@@ -1,0 +1,108 @@
+li {
+  display: grid;
+  list-style: none;
+  min-width: 400px;
+  max-width: 100%;
+  text-align: center;
+  border: 0.1em solid lightgray;
+  border-radius: 6px;
+  margin: 0 auto 0.5em auto;
+  padding: 0.2em;
+  line-height: 1.5em;
+  height: auto;
+  word-wrap: break-word;
+  grid-template-areas: "text text text button";
+  overflow: hidden;
+}
+li:hover {
+  animation: todo 0.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes todo {
+  from {
+    color: initial;
+    background: initial;
+  }
+  to {
+    color: #282c34;
+    background: #ccc;
+  }
+}
+
+.delBtn {
+  margin: auto 0 auto auto;
+  max-height: 32px;
+  padding-top: auto;
+  padding-bottom: auto;
+  width: 1fr;
+  background-color: rgba(255, 0, 0, 0.5);
+  border-radius: 6px;
+  grid-area: button;
+}
+
+span.title {
+  margin-right: auto;
+  margin-left: auto;
+  grid-area: text;
+}
+
+.todoDiv {
+  width: 80%;
+}
+
+.addBtn {
+  margin: 0;
+  background-color: #008080;
+  color: #282c34;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 0 6px 6px 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.delBtn:hover {
+  animation: delBtn 0.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes delBtn {
+  from {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+  to {
+    background-color: rgba(255, 0, 0, 0.8);
+  }
+}
+
+.addInput {
+  font: inherit;
+  display: inline-block;
+  background: #282c34;
+  height: 100%;
+  color: lightgray;
+  appearance: none;
+  border: 3px solid lightgray;
+  border-width: 3px 0 3px 3px;
+  border-radius: 6px 0px 0px 6px;
+  margin: 0;
+  box-sizing: border-box;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  overflow: hidden;
+}
+
+div.addDiv {
+  display: flex;
+  height: 45px;
+  min-width: 400px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
